@@ -1,0 +1,16 @@
+.names{
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  font-family: 'Exo 2', sans-serif;
+  background: #424242;
+  color:white;
+  pointer-events: none;
+  box-shadow: 7px 7px 30px grey;
+  }
