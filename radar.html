@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="d3/d3.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Vis</title>
-  </head>
-  <body>
-    <div id="demo">
-            <div id="buttons">
-            <label><input type="checkbox" id="data1"></label>
-            <label><input type="checkbox" id="data2"></label>
-            <label><input type="checkbox" id="data3"></label>
-            <label><input type="checkbox" id="data4"></label>
-            <label><input type="checkbox" id="data5"></label>
-            <label><input type="checkbox" id="data6"></label>
-            </div>
+
+<head>
+  <meta charset="utf-8">
+  <script src="d3/d3.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Vis</title>
+</head>
+
+<body>
+  <div id="demo">
+    <div id="buttons">
+      <label>
+        <input type="checkbox" id="data-p1" sid="p1" class="btn-radar">
+        <img src="" id="img-p1" alt="" />
+        <span id="label-p1"></span>
+      </label>
+      <label>
+        <input type="checkbox" id="data-p2" sid="p2" class="btn-radar">
+        <img src="" id="img-p2" alt="" />
+        <span id="label-p2"></span>
+      </label>
+      <label>
+        <input type="checkbox" id="data-p3" sid="p3" class="btn-radar">
+        <img src="" id="img-p3" alt="" />
+        <span id="label-p3"></span>
+      </label>
+      <label>
+        <input type="checkbox" id="data-p4" sid="p4" class="btn-radar">
+        <img src="" id="img-p4" alt="" />
+        <span id="label-p4"></span>
+      </label>
+      <label>
+        <input type="checkbox" id="data-p5" sid="p5" class="btn-radar">
+        <img src="" id="img-p5" alt="" />
+        <span id="label-p5"></span>
+      </label>
+      <label>
+        <input type="checkbox" id="data-p6" sid="p6" class="btn-radar">
+        <img src="" id="img-p6" alt="" />
+        <span id="label-p6"></span>
+      </label>
     </div>
-    <div id="top-contributors-viz"></div>
-    <script src="js/radar.js"></script>
-  </body>
+  </div>
+  <div id="radar-vis"></div>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="js/radar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

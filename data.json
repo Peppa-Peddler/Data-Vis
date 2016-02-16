@@ -1,0 +1,81 @@
+{
+  "candidatos": [{
+    "candidato": {
+      "id": "54",
+      "field_nombres": "Keiko",
+      "field_apellido_paterno": "Fujimori",
+      "field_color_6": "#FFAD46",
+      "field_foto": "http:\/\/45.79.163.230\/sites\/default\/files\/Keiko-Andina-SEMAFORO.jpg",
+      "tid_0": "1",
+      "tid_1": "3",
+      "tid_2": "4",
+      "tid_3": "1",
+      "tid_4": "3"
+    }
+  }, {
+    "candidato": {
+      "id": "59",
+      "field_nombres": "Julio",
+      "field_apellido_paterno": "Guzm\u00e1n",
+      "field_color_6": "#CD74E6",
+      "field_foto": "http:\/\/45.79.163.230\/sites\/default\/files\/Guzman-Andina-semaforo.jpg",
+      "tid_0": "3",
+      "tid_1": "3",
+      "tid_2": "4",
+      "tid_3": "4",
+      "tid_4": "1"
+    }
+  }, {
+    "candidato": {
+      "id": "57",
+      "field_nombres": "Pedro Pablo ",
+      "field_apellido_paterno": "Kuczynski",
+      "field_color_6": "#F691B2",
+      "field_foto": "http:\/\/45.79.163.230\/sites\/default\/files\/PPK-Andina-fotoMeme.jpg",
+      "tid_0": "1",
+      "tid_1": "2",
+      "tid_2": "4",
+      "tid_3": "3",
+      "tid_4": "1"
+    }
+  }, {
+    "candidato": {
+      "id": "55",
+      "field_nombres": "C\u00e9sar",
+      "field_apellido_paterno": "Acu\u00f1a",
+      "field_color_6": "#4986E7",
+      "field_foto": "http:\/\/45.79.163.230\/sites\/default\/files\/Acua%C3%B1a-Andina-semaforofinal.jpg",
+      "tid_0": "1",
+      "tid_1": "1",
+      "tid_2": "3",
+      "tid_3": "4",
+      "tid_4": "1"
+    }
+  }, {
+    "candidato": {
+      "id": "56",
+      "field_nombres": "Alan",
+      "field_apellido_paterno": "Garc\u00eda",
+      "field_color_6": "#FA573C",
+      "field_foto": "http:\/\/45.79.163.230\/sites\/default\/files\/Garcia_Andina-semaforo.jpg",
+      "tid_0": "3",
+      "tid_1": "1",
+      "tid_2": "4",
+      "tid_3": "3",
+      "tid_4": "1"
+    }
+  }, {
+    "candidato": {
+      "id": "60",
+      "field_nombres": "Ver\u00f3nika",
+      "field_apellido_paterno": "Mendoza",
+      "field_color_6": "#7BD148",
+      "field_foto": "http:\/\/45.79.163.230\/sites\/default\/files\/Vero_Andina-semaforo.jpg",
+      "tid_0": "4",
+      "tid_1": "3",
+      "tid_2": "4",
+      "tid_3": "4",
+      "tid_4": "3"
+    }
+  }]
+}
