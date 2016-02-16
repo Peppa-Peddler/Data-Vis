@@ -18,6 +18,7 @@ op.vis.radarVis = function(options) {
   self.candidato = ['#8dd3c7', '#ffffb3', '#bebada', '#fb8072', '#80b1d3', '#fdb462'];
   self.semaforoC = ['#ffffd4', '#fed98e', '#fe9929', '#cc4c02'];
   self.rugrosC = ["Empleo", "Recursos Naturales", "Estándares Ambientales", "Diversificación productiva", "Justicia Económica"];
+  self.rugrosIcon = ["question30.png", "question30.png", "question30.png", "question30.png", "question30.png"];
 
   self.iniangle = 54 * Math.PI / 180;
 
@@ -29,10 +30,16 @@ op.vis.radarVis = function(options) {
   self.cy = self.rad + 20;
   self.valores = Array(6);
 
+  self.wIcon = 128;
+
   self.init = function() {
     self.svg = d3.select(self.parentSelect).append("svg")
       .attr("width", self.width)
-      .attr("height", self.height);
+      .attr("height", self.height + 2 * self.wIcon);
+
+    self.container = self.svg
+      .append("g")
+      .attr("transform", "translate(0," + self.wIcon + ")");
 
     var valsx = [0, 0, 0, 0, 0, 0];
 
@@ -142,13 +149,13 @@ op.vis.radarVis = function(options) {
 
     });
 
-    self.vals = self.svg.selectAll(".txt")
+    self.vals = self.container.selectAll(".txt")
       .data(new Array(self.rugros))
       .enter()
       .append("line")
       .style();
 
-    self.radar = self.svg.selectAll(".radar")
+    self.radar = self.container.selectAll(".radar")
       .data(new Array(self.semaforo))
       .enter()
       .append("polygon")
@@ -168,7 +175,7 @@ op.vis.radarVis = function(options) {
         return ans;
       });
 
-    self.lines = self.svg.selectAll(".lin")
+    self.lines = self.container.selectAll(".lin")
       .data(new Array(self.rugros))
       .enter()
       .append("line")
@@ -189,7 +196,7 @@ op.vis.radarVis = function(options) {
         return pointY + self.cy;
       });
 
-    self.values = self.svg.selectAll(".values")
+    self.values = self.container.selectAll(".values")
       .data(new Array(self.candidatos))
       .enter()
       .append("polygon")
@@ -209,34 +216,30 @@ op.vis.radarVis = function(options) {
       });
 
     self.anchor = ["middle", "middle", "end", "middle", "start"];
-    self.xD = [0, 0, -10, 0, +10];
-    self.yD = [20, 20, 0, -5, 0];
+    self.xD = [0, 0, 0, 0, 0];
+    self.yD = [0, 0, 0, 0, 0];
 
-    self.NI = self.svg.selectAll(".vals")
+    self.NI = self.container.selectAll(".vals")
       .data(self.rugrosC)
       .enter()
-      .append("text")
-      .attr("class", "names")
-      .attr("x", function(d, i) {
+      .append("svg:image")
+      .attr('x', function(d, i) {
         var angle = 2 * Math.PI / self.rugros;
-        var radius = self.rad;
+        var radius = self.rad + self.wIcon / 2;
         var pointX = radius * Math.cos(angle * i + self.iniangle);
-        return pointX + self.cx + self.xD[i];
+        return pointX + self.cx + self.xD[i] - self.wIcon / 2;
       })
-      .attr("y", function(d, i) {
+      .attr('y', function(d, i) {
         var angle = 2 * Math.PI / self.rugros;
-        var radius = self.rad;
+        var radius = self.rad + self.wIcon / 2;
         var pointY = radius * Math.sin(angle * i + self.iniangle);
-        return pointY + self.cy + self.yD[i];
+        return pointY + self.cy + self.yD[i] - self.wIcon / 2;
       })
-      .style("text-anchor", function(d, i) {
-        return self.anchor[i];
+      .attr('width', self.wIcon)
+      .attr('height', self.wIcon)
+      .attr("xlink:href", function(d, i) {
+        return self.rugrosIcon[i];
       })
-      .text(function(d) {
-        return d;
-      })
-      .style("font-size", 1.5 * self.dx + "px")
-      .style("fill", "black");
 
   };
 
